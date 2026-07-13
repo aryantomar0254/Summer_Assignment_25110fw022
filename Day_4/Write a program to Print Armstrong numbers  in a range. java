@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main{
+public static void main(String[]args){
+Scanner sc=new Scanner(System.in);
+int start=sc.nextInt();
+int end=sc.nextInt();
+
+for(int i=start;i<=end;i++){
+int num=i,sum=0,digits=0,temp=num;
+
+while(temp>0){
+digits++;
+temp/=10;
+}
+
+temp=num;
+while(temp>0){
+int rem=temp%10;
+sum+=(int)Math.pow(rem,digits);
+temp/=10;
+}
+
+if(sum==num)
+System.out.print(num+" ");
+}
+}
+}
